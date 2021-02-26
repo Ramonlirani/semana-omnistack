@@ -1,0 +1,215 @@
+#page-study #container {
+    width: 100vw;
+    height: 100vh;
+}
+
+#search-teachers {
+    margin-top: 3.2rem;
+}
+
+#search-teachers label {
+     color: var(--color-text-in-primary); /*cor das letras do formulario*/
+}
+
+#search-teachers .select-block {
+    margin-bottom: 1.4rem;
+}
+
+#search-teachers button {  /*config botão filtrar*/
+    width: 100%;   
+    height: 5.6rem; /*esticar*/
+    background: var(--color-secondary); /*cor de fundo*/
+    color: var(--color-button-text); /*cor do texto*/
+    border: 0;  /*tirar borda*/
+    border-radius: .8rem;  /*arredondar a borda*/
+    cursor: pointer;  /*mãozinha do cursos quando passa pelo botão*/
+    font: 700 1.6rem Archivo; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s; /*transição de cor de fundo*/
+    margin-top: 3.2rem; /*margem para separar da"hora"*/
+}
+
+#search-teachers button:hover{
+    background-color: var(--color-secondary-dark); /*cor muda ao passar o mouse em cima*/
+}
+
+#page-study main{  /*foto e comentarios sobre o professor*/
+    margin: 3.2rem auto;
+    width: 90%;
+
+}
+
+.teacher-item{
+    background-color: var(--color-box-base);
+    border: 1px solid var(--color-line-in-white);
+
+    border-radius: 0.8rem;
+    margin-top: 2.4rem;
+}
+
+.teacher-item header{
+    padding: 3.2rem 2rem;
+    display: flex;
+    align-items: center;
+}
+.teacher-item header img{  /*deixar a imagem um circulo*/
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+}
+
+.teacher-item header div{  /*margem da imagem para o nome do prof*/
+    margin-left: 2.4rem;
+}
+
+.teacher-item header div strong{  
+    font: 700 2.4rem Archivo;
+    display: block;
+    color: var(--color-text-title);
+}
+
+.teacher-item header div span{ /*"quimica*/
+    font-size: 1.6rem;
+    display: block;
+    margin-top: .4rem;
+}
+
+.teacher-item > p {  /*primerio nivel de p (nao pegar a hora e preço) configuração do texto*/
+    padding: 0 2rem;
+    font-size: 1.6rem;
+    line-height: 2.8rem;
+}
+ 
+.teacher-item footer{   /*parte do valor e "entrar em contato"*/
+    padding: 3.2rem 2rem;
+    background-color: var(--color-box-footer);
+    border-top: 1px solid var(--color-line-in-white);
+    margin-top: 3.2rem;
+
+    display:flex;  /*ficara grudado o contato com o preço*/
+    align-items: center;   /*ficaram em linha no eixo X*/
+    justify-content: space-between;  /*cara um vai para um canto*/
+}
+
+.teacher-item footer p{
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+    color: var(--color-text-complement);
+}
+
+.teacher-item footer p strong{  /*o preço*/
+    font-size: 1.6rem;
+    color: var(--color-primary);
+    display: block;
+}
+
+.teacher-item footer .button{   /*botão do zap*/
+    width: 20rem;
+    height: 5.6rem;
+    background: var(--color-secondary);
+    color: var(--color-button-text);
+    border: 0;
+    border-radius: .8rem;
+    cursor: pointer;
+    font: 700 1.4 Archivo;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    text-decoration: none;
+
+    transition: background 0.2s;
+    margin-left: 1.6rem;
+}
+
+.teacher-item footer button:hover{
+    background: var(--color-secondary-dark);
+}
+
+#page-study main .no-results {
+    max-width: 30rem;
+    margin: 12rem auto;
+    text-align: center;
+}
+
+@media (min-width:700px) {
+    #page-study #container{
+        max-width: 100vw;
+    }
+
+    .page-header{
+        height: 340px;
+    }
+    
+    .page-header .top-bar-container{  /*seta*/
+        max-width: 1100px;
+    }
+
+    .page-header .header-content{
+        max-width: 740px;
+
+        margin: 0 auto; 
+
+        flex: 1 1;
+        padding-bottom: 48px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+    }
+
+    .page-header .header-content strong{
+        max-width: 350px;
+    }
+
+
+    .teacher-item header,
+    .teacher-item footer{
+        padding: 32px;
+    }
+
+    #search-teachers{    /*parte para pesquisar os professores*/
+        display: grid;
+        grid-template-columns: repeat(4, 1fr); /*repetir as colunas iguais*/
+        gap: 16px;
+        position: absolute; /*serve para nao deixar um ao lado do outro*/
+        bottom: -28px;
+    }
+
+    #page-study main{
+        padding: 32px 0;  /*espaçamento entre o nome e "materia,dia e hora"*/
+        max-width: 740px;
+        margin: 0 auto;
+    }
+
+    #search-teachers .select-block{
+        margin-bottom: 0;
+    }
+
+    .teacher-item > p{  /*primeiro nivel do p espaçamento margem dos textos*/
+        padding: 0 32px;
+    }
+
+    .teacher-item footer p strong{  /*preço e hora "estavam grudados"*/
+        display: initial;
+        margin-left: 16px;
+    }
+
+    .teacher-item footer button{
+        width: 245px;
+        font-size: 16px;
+        justify-content: center;
+    }
+
+    .teacher-item footer button img{
+        margin-right: 16px;
+    }
+}
+
+
+
+
+
